@@ -44,6 +44,11 @@ public class AnimationController : MonoBehaviour
         // }
     }
 
+    public void OnIsAliveChanged(bool value)
+    {
+        animator.SetBool("isAlive", value);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))
